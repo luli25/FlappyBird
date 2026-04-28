@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "name": "Flap",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "644efa3f-88aa-412e-b99b-7a5591e483ce",
+            "actions": [
+                {
+                    "name": "Flap",
+                    "type": "Button",
+                    "id": "4d94bf06-3a56-4169-9bae-92722924134e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0c20672f-e2f3-44c4-8d5f-4f3752a52205",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Flap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b1f176f9-bfe5-4dc3-b1b3-ae7932d5a7ff",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Flap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
