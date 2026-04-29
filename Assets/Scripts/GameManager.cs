@@ -1,11 +1,15 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject gameOverText;
+    
+    [SerializeField]
+    private TMP_Text scoreText;
     
     public static GameManager Instance;
     public bool IsGameOver { get; private set; }
@@ -13,6 +17,8 @@ public class GameManager : MonoBehaviour
     public event Action OnGameOver;
 
     private bool _canRestart = false;
+
+    private int score;
 
     private void Awake()
     {
@@ -52,5 +58,11 @@ public class GameManager : MonoBehaviour
         }
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void IncreaseScore()
+    {
+        score++;
+        scoreText.text = score.ToString();
     }
 }

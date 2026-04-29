@@ -704,7 +704,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2014620975138379235, guid: e9a42201b8390d144a2f1fbbb6ef7187, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1636,6 +1636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   gameOverText: {fileID: 1564480716}
+  scoreText: {fileID: 1979136953}
 --- !u!4 &2096818377
 Transform:
   m_ObjectHideFlags: 0
