@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     
     [SerializeField]
     private TMP_Text scoreText;
+
+    [SerializeField]
+    private TMP_Text coinText;
     
     public static GameManager Instance;
     public bool IsGameOver { get; private set; }
@@ -19,6 +22,8 @@ public class GameManager : MonoBehaviour
     private bool _canRestart = false;
 
     private int score;
+
+    private int coinCount;
 
     private void Awake()
     {
@@ -64,5 +69,11 @@ public class GameManager : MonoBehaviour
     {
         score++;
         scoreText.text = score.ToString();
+    }
+
+    public void IncreaseCoinCount()
+    {
+        coinCount++;
+        coinText.text = coinCount.ToString();
     }
 }
