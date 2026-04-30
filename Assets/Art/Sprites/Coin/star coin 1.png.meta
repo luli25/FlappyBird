@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e9a42201b8390d144a2f1fbbb6ef7187
+guid: 3d96a688060aa5541b81b92806c4f38f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2014620975138379235
-    second: flap-1_0
+      213: -10877114001937685
+    second: star coin 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 75
+  spritePixelsToUnits: 2500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flap-1_0
+      name: star coin 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 6
-        width: 95
-        height: 68
+        y: 0
+        width: 2233
+        height: 2243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1a63d3a5e0aa04e0800000000000000
-      internalID: -2014620975138379235
+      spriteID: beaabbb825b59dff0800000000000000
+      internalID: -10877114001937685
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      flap-1_0: -2014620975138379235
+      star coin 1_0: -10877114001937685
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c36ffcf7cfa9c334f964c7a89f4792b6
+guid: 74c1b38ec8c95e54385ba56f65a87c65
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6176760384784502243
-    second: star coin rotate 4_0
+      213: -6763680966515212887
+    second: star coin 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 2500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: star coin rotate 4_0
+      name: star coin 2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 339
-        height: 2242
+        width: 2233
+        height: 2243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d12f63ae72db74aa0800000000000000
-      internalID: -6176760384784502243
+      spriteID: 9ad3ac81ff39222a0800000000000000
+      internalID: -6763680966515212887
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      star coin rotate 4_0: -6176760384784502243
+      star coin 2_0: -6763680966515212887
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
