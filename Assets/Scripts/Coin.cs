@@ -17,6 +17,6 @@ public class Coin : MonoBehaviour
         AudioSource.PlayClipAtPoint(coinSound.clip, transform.position);
         
         GameManager.Instance.IncreaseCoinCount();
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
