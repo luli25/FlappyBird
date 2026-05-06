@@ -155,7 +155,6 @@ MonoBehaviour:
   maxYPosition: 3
   baseSpawnTime: 2.5
   minSpawnTime: 1.2
-  gapSize: 2
 --- !u!4 &63025422
 Transform:
   m_ObjectHideFlags: 0
@@ -1241,15 +1240,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CoinPool
   coinPrefab: {fileID: 8338426871906829327, guid: a88233241fb9e1a44a2034949a334745, type: 3}
   poolSize: 3
-  xSpawnPosition: 12
+  xSpawnPosition: 10
   minYPosition: -0.5
-  maxYPosition: 4
+  maxYPosition: 2
   baseSpawnTime: 2.5
   minSpawnTime: 1.2
-  obstaclesPool: {fileID: 63025421}
-  minDistanceFromObstacle: 1.5
-  xProximityThreshold: 3
-  maxRetries: 10
 --- !u!4 &1755578352
 Transform:
   m_ObjectHideFlags: 0
