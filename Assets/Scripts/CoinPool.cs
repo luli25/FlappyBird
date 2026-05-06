@@ -4,10 +4,11 @@ public class CoinPool : MonoBehaviour
 {
     [SerializeField] private GameObject coinPrefab;
     [SerializeField] private int poolSize = 3;
-    [SerializeField] private float spawnTime = 3f;
     [SerializeField] private float xSpawnPosition = 12f;
     [SerializeField] private float minYPosition = -1f;
     [SerializeField] private float maxYPosition = 4f;
+    [SerializeField] private float baseSpawnTime = 2.5f;
+    [SerializeField] private float minSpawnTime = 1.2f;
     
     private float timeElapsed;
     private int coinCount;
@@ -28,7 +29,15 @@ public class CoinPool : MonoBehaviour
     void Update()
     {
         timeElapsed += Time.deltaTime;
-        if (timeElapsed > spawnTime && !GameManager.Instance.IsGameOver)
+
+        // El spawnTime se reduce proporcionalmente a la velocidad
+        float currentSpawnTime = Mathf.Max(
+            minSpawnTime,
+            baseSpawnTime * (SpeedManager.Instance.initialSpeed // <-- hacé initialSpeed [HideInInspector] public
+                             / SpeedManager.Instance.CurrentSpeed)
+        );
+
+        if (timeElapsed > currentSpawnTime && !GameManager.Instance.IsGameOver)
         {
             SpawnCoins();
         }

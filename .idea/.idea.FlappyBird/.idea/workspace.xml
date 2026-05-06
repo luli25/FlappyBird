@@ -15,6 +15,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Coin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpeedManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@37e0d4fc2503/Shaders/Particles/ParticlesUnlit.shader" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -109,7 +110,7 @@
       <workItem from="1777573983575" duration="60000" />
       <workItem from="1777656402866" duration="5033000" />
       <workItem from="1777902467482" duration="10071000" />
-      <workItem from="1778077831293" duration="719000" />
+      <workItem from="1778077831293" duration="8377000" />
     </task>
     <servers />
   </component>
