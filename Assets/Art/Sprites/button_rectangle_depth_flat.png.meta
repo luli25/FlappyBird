@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f5d14478b6dcac442a9850d1f7848b64
+guid: 3b4d3f383721f144386fd592718c8efc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 260287246310902335
-    second: play-button 1_0
+      213: -7336049532282260110
+    second: button_rectangle_depth_flat_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: play-button 1_0
+      name: button_rectangle_depth_flat_0
       rect:
         serializedVersion: 2
-        x: 545
-        y: 614
-        width: 841
-        height: 234
+        x: 0
+        y: 0
+        width: 384
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3a0de71fd9bc9300800000000000000
-      internalID: 260287246310902335
+      spriteID: 27535a581dd113a90800000000000000
+      internalID: -7336049532282260110
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      play-button 1_0: 260287246310902335
+      button_rectangle_depth_flat_0: -7336049532282260110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
