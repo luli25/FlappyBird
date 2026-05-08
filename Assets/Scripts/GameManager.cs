@@ -5,14 +5,9 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject gameOverText;
-    
-    [SerializeField]
-    private TMP_Text scoreText;
-
-    [SerializeField]
-    private TMP_Text coinText;
+    [SerializeField] private GameObject gameOverText;
+    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text coinText;
     
     public static GameManager Instance;
     public bool IsGameOver { get; private set; }
@@ -21,9 +16,9 @@ public class GameManager : MonoBehaviour
 
     private bool _canRestart = false;
 
-    private int score;
+    private int _score;
 
-    private int coinCount;
+    private int _coinCount;
 
     private void Awake()
     {
@@ -67,13 +62,13 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseScore()
     {
-        score++;
-        scoreText.text = score.ToString();
+        _score++;
+        scoreText.text = _score.ToString();
     }
 
     public void IncreaseCoinCount()
     {
-        coinCount++;
-        coinText.text = coinCount.ToString();
+        _coinCount++;
+        coinText.text = _coinCount.ToString();
     }
 }
