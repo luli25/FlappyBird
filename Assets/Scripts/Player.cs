@@ -46,6 +46,11 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D()
     {
+        if (GameManager.Instance.IsGameOver)
+        {
+            return;
+        }
+        
         GameManager.Instance.GameOver();
         _anim.SetTrigger("Hit");
         _audio.PlayOneShot(hitSound);
