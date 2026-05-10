@@ -44,8 +44,13 @@ public class Player : MonoBehaviour
         _audio.PlayOneShot(flapSound);
     }
 
-    private void OnCollisionEnter2D()
+    private void OnCollisionEnter2D(Collision2D other)
     {
+        if (!other.gameObject.CompareTag("Pipe"))
+        {
+            return;
+        }
+        
         GameManager.Instance.GameOver();
         _anim.SetTrigger("Hit");
         _audio.PlayOneShot(hitSound);

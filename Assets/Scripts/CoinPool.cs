@@ -29,11 +29,10 @@ public class CoinPool : MonoBehaviour
     void Update()
     {
         timeElapsed += Time.deltaTime;
-
-        // El spawnTime se reduce proporcionalmente a la velocidad
+        
         float currentSpawnTime = Mathf.Max(
             minSpawnTime,
-            baseSpawnTime * (SpeedManager.Instance.initialSpeed // <-- hacé initialSpeed [HideInInspector] public
+            baseSpawnTime * (SpeedManager.Instance.initialSpeed
                              / SpeedManager.Instance.CurrentSpeed)
         );
 
