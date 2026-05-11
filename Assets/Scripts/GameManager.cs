@@ -2,12 +2,14 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverText;
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private TMP_Text coinText;
+    [SerializeField] private GameObject homeButton;
     
     public static GameManager Instance;
     public bool IsGameOver { get; private set; }
@@ -40,6 +42,7 @@ public class GameManager : MonoBehaviour
 
         IsGameOver = true;
         gameOverText.SetActive(true);
+        homeButton.SetActive(true);
         OnGameOver?.Invoke();
         
         Invoke(nameof(EnableRestart), 0.5f); // Adds a small delay before restarting the scene
@@ -53,6 +56,11 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         if (!_canRestart)
+        {
+            return;
+        }
+
+        if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
         }
@@ -70,5 +78,10 @@ public class GameManager : MonoBehaviour
     {
         _coinCount++;
         coinText.text = _coinCount.ToString();
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

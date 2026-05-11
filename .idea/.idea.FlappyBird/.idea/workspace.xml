@@ -15,6 +15,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Coin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HomeButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scroll.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpeedManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@37e0d4fc2503/Shaders/Particles/ParticlesUnlit.shader" root0="SKIP_HIGHLIGHTING" />
@@ -130,6 +131,7 @@
       <workItem from="1778423262610" duration="370000" />
       <workItem from="1778423836951" duration="429000" />
       <workItem from="1778518179422" duration="2613000" />
+      <workItem from="1778521732993" duration="4212000" />
     </task>
     <servers />
   </component>
