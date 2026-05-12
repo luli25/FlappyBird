@@ -6,11 +6,11 @@ public class Coin : MonoBehaviour
     [SerializeField] private ParticleSystem burstFx;
     [SerializeField] private AudioSource coinSound;
 
-    private Rigidbody2D rb;
+    private Rigidbody2D _rb;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,10 +20,10 @@ public class Coin : MonoBehaviour
             return;
         }
         
-        if (rb != null)
+        if (_rb != null)
         {
-            rb.linearVelocity = Vector2.zero;
-            rb.angularVelocity = 0f;
+            _rb.linearVelocity = Vector2.zero;
+            _rb.angularVelocity = 0f;
         }
         
         PlayEffect();

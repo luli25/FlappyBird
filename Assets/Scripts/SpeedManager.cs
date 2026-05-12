@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class SpeedManager : MonoBehaviour
 {
-    public static SpeedManager Instance;
-
     [Header("Speed")] 
     [HideInInspector] public float initialSpeed = 2.5f;
     [SerializeField] private float maxSpeed = 6f;
@@ -12,6 +10,7 @@ public class SpeedManager : MonoBehaviour
     [SerializeField] private float timeToIncreaseSpeed = 5f; // How many seconds to increase speed
     [SerializeField] private float speedIncrement = 0.2f; // How much speed increases
     
+    public static SpeedManager Instance;
     public float CurrentSpeed { get; private set; }
 
     private float _timer;

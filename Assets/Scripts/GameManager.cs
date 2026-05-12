@@ -48,11 +48,6 @@ public class GameManager : MonoBehaviour
         Invoke(nameof(EnableRestart), 0.5f); // Adds a small delay before restarting the scene
     }
 
-    private void EnableRestart()
-    {
-        _canRestart = true;
-    }
-
     public void Restart()
     {
         if (!_canRestart)
@@ -83,5 +78,10 @@ public class GameManager : MonoBehaviour
     public void GoToMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+    
+    private void EnableRestart()
+    {
+        _canRestart = true;
     }
 }

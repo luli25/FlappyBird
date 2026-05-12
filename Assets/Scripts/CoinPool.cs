@@ -10,25 +10,25 @@ public class CoinPool : MonoBehaviour
     [SerializeField] private float baseSpawnTime = 2.5f;
     [SerializeField] private float minSpawnTime = 1.2f;
     
-    private float timeElapsed;
-    private int coinCount;
-    private GameObject[] coins;
+    private float _timeElapsed;
+    private int _coinCount;
+    private GameObject[] _coins;
     
     void Start()
     {
-        coins = new GameObject[poolSize];
+        _coins = new GameObject[poolSize];
 
         for (int i = 0; i < poolSize; i++)
         {
-            coins[i] = Instantiate(coinPrefab);
-            coins[i].SetActive(false);
+            _coins[i] = Instantiate(coinPrefab);
+            _coins[i].SetActive(false);
         }
     }
 
     
     void Update()
     {
-        timeElapsed += Time.deltaTime;
+        _timeElapsed += Time.deltaTime;
         
         float currentSpawnTime = Mathf.Max(
             minSpawnTime,
@@ -36,7 +36,7 @@ public class CoinPool : MonoBehaviour
                              / SpeedManager.Instance.CurrentSpeed)
         );
 
-        if (timeElapsed > currentSpawnTime && !GameManager.Instance.IsGameOver)
+        if (_timeElapsed > currentSpawnTime && !GameManager.Instance.IsGameOver)
         {
             SpawnCoins();
         }
@@ -46,20 +46,19 @@ public class CoinPool : MonoBehaviour
     {
         float ySpawnPosition = Random.Range(minYPosition, maxYPosition);
         Vector2 spawnPosition = new Vector2(xSpawnPosition, ySpawnPosition);
-        coins[coinCount].transform.position = spawnPosition;
+        _coins[_coinCount].transform.position = spawnPosition;
 
-        if (!coins[coinCount].activeSelf)
+        if (!_coins[_coinCount].activeSelf)
         {
-            coins[coinCount].SetActive(true);
+            _coins[_coinCount].SetActive(true);
         }
 
-        timeElapsed = 0f;
-        coinCount++;
+        _timeElapsed = 0f;
+        _coinCount++;
 
-        if (coinCount == poolSize)
+        if (_coinCount == poolSize)
         {
-            coinCount = 0;
+            _coinCount = 0;
         }
-
     }
 }

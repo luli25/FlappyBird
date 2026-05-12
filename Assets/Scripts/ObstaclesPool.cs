@@ -10,32 +10,31 @@ public class ObstaclesPool : MonoBehaviour
     [SerializeField] private float baseSpawnTime = 2.5f;
     [SerializeField] private float minSpawnTime = 1.2f;
 
-    private float timeElapsed;
-    private int obstaclesCount;
-    private GameObject[] obstacles;
+    private float _timeElapsed;
+    private int _obstaclesCount;
+    private GameObject[] _obstacles;
     void Start()
     {
-        obstacles = new GameObject[poolSize];
+        _obstacles = new GameObject[poolSize];
 
         for (int i = 0; i < poolSize; i++)
         {
-            obstacles[i] = Instantiate(obstaclePrefab);
-            obstacles[i].SetActive(false);
+            _obstacles[i] = Instantiate(obstaclePrefab);
+            _obstacles[i].SetActive(false);
         }
     }
 
     void Update()
     {
-        timeElapsed += Time.deltaTime;
-
-        // El spawnTime se reduce proporcionalmente a la velocidad
+        _timeElapsed += Time.deltaTime;
+        
         float currentSpawnTime = Mathf.Max(
             minSpawnTime,
-            baseSpawnTime * (SpeedManager.Instance.initialSpeed // <-- hacé initialSpeed [HideInInspector] public
+            baseSpawnTime * (SpeedManager.Instance.initialSpeed
                              / SpeedManager.Instance.CurrentSpeed)
         );
 
-        if (timeElapsed > currentSpawnTime && !GameManager.Instance.IsGameOver)
+        if (_timeElapsed > currentSpawnTime && !GameManager.Instance.IsGameOver)
         {
             SpawnObstacle();
         }
@@ -46,19 +45,19 @@ public class ObstaclesPool : MonoBehaviour
         float ySpawnPosition = Random.Range(minYPosition, maxYPosition);
         
         Vector2 spawnPosition = new Vector2(xSpawnPosition, ySpawnPosition);
-        obstacles[obstaclesCount].transform.position = spawnPosition;
+        _obstacles[_obstaclesCount].transform.position = spawnPosition;
 
-        if (!obstacles[obstaclesCount].activeSelf)
+        if (!_obstacles[_obstaclesCount].activeSelf)
         {
-            obstacles[obstaclesCount].SetActive(true);
+            _obstacles[_obstaclesCount].SetActive(true);
         }
         
-        timeElapsed = 0f;
-        obstaclesCount++;
+        _timeElapsed = 0f;
+        _obstaclesCount++;
 
-        if (obstaclesCount == poolSize)
+        if (_obstaclesCount == poolSize)
         {
-            obstaclesCount = 0;
+            _obstaclesCount = 0;
         }
     }
 }
