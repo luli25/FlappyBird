@@ -14,7 +14,7 @@ Score points — Each pipe you pass through counts as one point
 
 🚀 Getting Started
 bash# Clone the repository
-git clone https://github.com/your-username/flappy-bird.git
+git clone https://github.com/luli25/FlappyBird/blob/main/README.md
 
 # Navigate into the project directory
 cd flappy-bird
